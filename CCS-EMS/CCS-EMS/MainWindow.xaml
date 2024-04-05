@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CCS_EMS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStyle="None">
+        Title="MainWindow" Height="480" Width="720" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent" AllowsTransparency="True" ResizeMode="NoResize">
     <Grid>
-        
+        <Border>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="LOGIN_PANEL" Width="4*"/>
+                    <ColumnDefinition x:Name="WELCOME_PANEL" Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Background="#1C1D21" CornerRadius="10 0 0 10" Padding="60 20">
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel>
+                            <Image Style="{StaticResource CCS_LOGO}" Source="/IMAGES/Default/ccs_logo.png"/>
+                            <Grid Margin="0 20 0 0"/>
+                            <TextBlock Text="Login" Foreground="White" FontSize="25" FontWeight="Bold"/>
+                            <Grid Margin="0 5 0 0"/>
+                            <TextBlock Text="Enter your account details" Foreground="LightGray" FontSize="8"/>
+                            <Grid Margin="0 20 0 0"/>
+                            <TextBox x:Name="USERNAME_TEXTBOX" Text="Username" Style="{StaticResource TEXTBOX}" GotFocus="RemovePlaceholderText" LostFocus="RestorePlaceholderText"/>
+                            <Grid Margin="0 10 0 0">
+                                <PasswordBox x:Name="PasswordBox" Style="{StaticResource TEXTBOX}" PasswordChanged="PasswordBox_PasswordChanged" GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus"/>
+                                <TextBlock x:Name="PasswordPlaceholder" Text="Password" Style="{StaticResource PASSWORD_PLACEHOLDER}" Visibility="Visible" IsHitTestVisible="False"/>
+                            </Grid>
+                            <Grid Margin="0 20 0 0"/>
+                            <Button x:Name="LOGIN_BUTTON" Content="Login" Style="{StaticResource LOGIN_BUTTON}"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Background="#925FE2" CornerRadius="0 10 10 0" Padding="20">
+                    <TextBlock Text="Hatdog"/>
+                </Border>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

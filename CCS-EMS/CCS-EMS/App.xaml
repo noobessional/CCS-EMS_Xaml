@@ -4,6 +4,49 @@
              xmlns:local="clr-namespace:CCS_EMS"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style x:Key="CCS_LOGO" TargetType="Image">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Stretch" Value="UniformToFill"/>
+            <Setter Property="Clip">
+                <Setter.Value>
+                    <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TEXTBOX" TargetType="Control">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Padding" Value="-2 5"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="BorderBrush" Value="#FF7D7D7D"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#FF7D7D7D"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="PASSWORD_PLACEHOLDER" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FF7D7D7D"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="LOGIN_BUTTON" TargetType="Button">
+            <Setter Property="Background" Value="#925FE2"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="5" Padding="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
          
     </Application.Resources>
 </Application>
