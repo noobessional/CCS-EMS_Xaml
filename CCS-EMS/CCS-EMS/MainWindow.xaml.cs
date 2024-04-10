@@ -24,12 +24,15 @@ namespace CCS_EMS
         {
             InitializeComponent();
         }
+
+        //----------------TextBox Section----------------
         private void RemovePlaceholderText(object sender, RoutedEventArgs e)
         {
             TextBox textBox = sender as TextBox;
             if (textBox != null && textBox.Text == "Username")
             {
                 textBox.Text = "";
+                textBox.Foreground = Brushes.White;
             }
         }
 
@@ -39,6 +42,7 @@ namespace CCS_EMS
             if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
             {
                 textBox.Text = "Username";
+                textBox.Foreground = new SolidColorBrush(Color.FromRgb(125, 125, 125));
             }
         }
         private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
@@ -67,6 +71,19 @@ namespace CCS_EMS
                 PasswordPlaceholder.Visibility = Visibility.Visible;
             }
         }
+        //-----------------------------------------------
 
+
+        private void LOGIN_BUTTON_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            LOGIN_BUTTON.Background = new SolidColorBrush(Color.FromRgb(161, 120, 226));
+        }
+
+        private void LOGIN_BUTTON_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+            LOGIN_BUTTON.Background = new SolidColorBrush(Color.FromRgb(149, 95, 226));
+        }
     }
 }

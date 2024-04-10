@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:CCS_EMS"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+
         <Style x:Key="CCS_LOGO" TargetType="Image">
             <Setter Property="Width" Value="100"/>
             <Setter Property="Height" Value="100"/>
