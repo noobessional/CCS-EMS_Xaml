@@ -85,5 +85,19 @@ namespace CCS_EMS
             this.Cursor = Cursors.Arrow;
             LOGIN_BUTTON.Background = new SolidColorBrush(Color.FromRgb(149, 95, 226));
         }
+
+        private void LOGIN_BUTTON_Click(object sender, RoutedEventArgs e)
+        {
+            if (UsernameBox.ToString() != "" && PasswordBox.Password.ToString() != "")
+            {
+                var homePage = new HOME_PAGE();
+                homePage.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the details!", "Error", MessageBoxButton.OK);
+            }
+        }
     }
 }
