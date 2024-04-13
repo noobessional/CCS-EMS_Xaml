@@ -9,6 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="MENU" Width="1*"/>
+            <ColumnDefinition x:Name="SPLITTER" Width="auto"/>
             <ColumnDefinition x:Name="MAIN_PAGE" Width="4*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Background="Transparent" Padding="15">
@@ -16,7 +17,7 @@
                 <StackPanel>
                     <Image Style="{StaticResource CCS_LOGO2}" Source="/IMAGES/Default/ccs_logo.png"/>
                     <Grid Height="20"/>
-                    <Grid x:Name="ANNOUNCEMENT_BUTTON" Height="30">
+                    <Grid x:Name="ANNOUNCEMENT_BUTTON" Height="30" HorizontalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="3*"/>
@@ -29,7 +30,7 @@
                         </Grid>
                     </Grid>
                     <Grid Height="5"/>
-                    <Grid x:Name="EVENT_BUTTON" Height="30">
+                    <Grid x:Name="EVENT_BUTTON" Height="30" HorizontalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="3*"/>
@@ -42,7 +43,7 @@
                         </Grid>
                     </Grid>
                     <Grid Height="5"/>
-                    <Grid x:Name="USERS_BUTTON" Height="30">
+                    <Grid x:Name="USERS_BUTTON" Height="30" HorizontalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="3*"/>
@@ -55,7 +56,7 @@
                         </Grid>
                     </Grid>
                     <Grid Height="5"/>
-                    <Grid x:Name="MESSAGE_BUTTON" Height="30">
+                    <Grid x:Name="MESSAGE_BUTTON" Height="30" HorizontalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="3*"/>
@@ -68,7 +69,7 @@
                         </Grid>
                     </Grid>
                     <Grid Height="5"/>
-                    <Grid x:Name="REPORT_BUTTON" Height="30">
+                    <Grid x:Name="REPORT_BUTTON" Height="30" HorizontalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="3*"/>
@@ -83,7 +84,8 @@
                 </StackPanel>
             </Border>
         </Border>
-        <Border Grid.Column="1" Padding="0 15">
+        <!-- <GridSplitter Grid.Column="1" Background="Black" Width="5" HorizontalAlignment="Stretch"/> -->
+        <Border Grid.Column="2" Padding="0 15">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -95,6 +97,9 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="CCS-Event Management System" FontWeight="Medium" FontSize="20"/>
+                    </Grid>
                     <Grid Grid.Column="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
@@ -103,12 +108,36 @@
                         <Grid Grid.Column="0">
                             
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Tarunga daw ni gaw kanang macenter ang image ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->  
-<!-- ~~~~~~~~~~~~~~~~~~~~ Baseha lang sa App.xaml gaw tas ako lang i comment kung asa dapita ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->                            
+<!-- ~~~~~~~~~~~~~~~~~~~~ Baseha lang sa App.xaml gaw tas ako lang i comment kung asa dapita ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                             <Image Source="IMAGES/Default/haerin.jpg" Style="{StaticResource PROFILE_PICTURE}"/>
+                            <Border CornerRadius="15" Width="30" Height="30" BorderBrush="#925FE2" Background="Transparent" BorderThickness="2"/>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->                           
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center">
+                            <StackPanel>
+                                <TextBlock Text="Kang Haerin" FontFamily="Roboto" FontWeight="Medium"/>
+                                <TextBlock Text="Admin" FontFamily="Roboto" FontSize="10"/>
+                            </StackPanel>
                         </Grid>
                     </Grid>
                 </Grid>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~ THIS PART IS THE MAIN AREA OF EACH MENUS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->                
+                <Grid x:Name="ANNOUNCEMENT_PANEL" Grid.Row="1" Visibility="Visible">
+                    <TextBlock Text="Kania kay Announcement"/>
+                </Grid>
+                <Grid x:Name="EVENTS_PANEL" Grid.Row="1" Visibility="Hidden">
+                    <TextBlock Text="Kania kay Events"/>
+                </Grid>
+                <Grid x:Name="USERS_PANEL" Grid.Row="1" Visibility="Hidden">
+                    <TextBlock Text="Kania kay Users"/>
+                </Grid>
+                <Grid x:Name="MESSAGE_PANEL" Grid.Row="1" Visibility="Hidden">
+                    <TextBlock Text="Kania kay Message"/>
+                </Grid>
+                <Grid x:Name="REPORTS_PANEL" Grid.Row="1" Visibility="Hidden">
+                    <TextBlock Text="Kania kay Reports"/>
+                </Grid>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END OF MAIN AREA ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->             
             </Grid>
         </Border>
     </Grid>
