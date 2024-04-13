@@ -5,8 +5,111 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CCS_EMS"
         mc:Ignorable="d"
-        Title="HOME_PAGE" Height="450" Width="800">
+        Title="HOME_PAGE" Height="600" Width="900" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="White" AllowsTransparency="True" ResizeMode="NoResize">
     <Grid>
-        <TextBlock Text="Mao kini ang Main Window Home Page" FontSize="40" FontWeight="Bold"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="MENU" Width="1*"/>
+            <ColumnDefinition x:Name="MAIN_PAGE" Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="Transparent" Padding="15">
+            <Border Background="#925FE2" CornerRadius="15" Padding="10 20">
+                <StackPanel>
+                    <Image Style="{StaticResource CCS_LOGO2}" Source="/IMAGES/Default/ccs_logo.png"/>
+                    <Grid Height="20"/>
+                    <Grid x:Name="ANNOUNCEMENT_BUTTON" Height="30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Announcement" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Height="5"/>
+                    <Grid x:Name="EVENT_BUTTON" Height="30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Events" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Height="5"/>
+                    <Grid x:Name="USERS_BUTTON" Height="30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Users" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Height="5"/>
+                    <Grid x:Name="MESSAGE_BUTTON" Height="30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Message" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Height="5"/>
+                    <Grid x:Name="REPORT_BUTTON" Height="30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Reports" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Border>
+        <Border Grid.Column="1" Padding="0 15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="12*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Tarunga daw ni gaw kanang macenter ang image ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->  
+<!-- ~~~~~~~~~~~~~~~~~~~~ Baseha lang sa App.xaml gaw tas ako lang i comment kung asa dapita ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->                            
+                            <Image Source="IMAGES/Default/haerin.jpg" Style="{StaticResource PROFILE_PICTURE}"/>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->                           
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

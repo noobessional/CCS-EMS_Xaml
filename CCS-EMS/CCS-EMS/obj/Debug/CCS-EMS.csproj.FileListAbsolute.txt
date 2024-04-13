@@ -14,3 +14,5 @@ C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug
 C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\CCS-EMS.exe
 C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\CCS-EMS.pdb
 C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\App.baml
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\HOME_PAGE.g.cs
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\HOME_PAGE.baml
