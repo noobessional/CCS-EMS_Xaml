@@ -12,7 +12,7 @@
             <ColumnDefinition x:Name="SPLITTER" Width="auto"/>
             <ColumnDefinition x:Name="MAIN_PAGE" Width="4*"/>
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Background="Transparent" Padding="15">
+        <Border Grid.Column="0" Background="Transparent" Padding="10">
             <Border Background="#925FE2" CornerRadius="15" Padding="10 20">
                 <StackPanel>
                     <Image Style="{StaticResource CCS_LOGO2}" Source="/IMAGES/Default/ccs_logo.png"/>
@@ -85,7 +85,7 @@
             </Border>
         </Border>
         <!-- <GridSplitter Grid.Column="1" Background="Black" Width="5" HorizontalAlignment="Stretch"/> -->
-        <Border Grid.Column="2" Padding="0 15">
+        <Border Grid.Column="2" Padding="0 10">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -121,9 +121,91 @@
                         </Grid>
                     </Grid>
                 </Grid>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~ THIS PART IS THE MAIN AREA OF EACH MENUS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->                
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~ THIS PART IS THE MAIN AREA OF EACH MENUS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                
+                <!-- Announcement Panel -->
                 <Grid x:Name="ANNOUNCEMENT_PANEL" Grid.Row="1" Visibility="Visible">
-                    <TextBlock Text="Kania kay Announcement"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Welcome, Kang Haerin!" FontFamily="Roboto" FontSize="25" FontWeight="Medium" VerticalAlignment="Center" Margin="0 10"/>
+                        <Grid Grid.Row="1" Margin="0 0 0 5">
+                            <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Rectangle.Effect>
+                                    <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Grid  Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Grid.Column="1" Text="Announcement" VerticalAlignment="Center" FontWeight="Medium" FontSize="20" FontFamily="Roboto"/>
+                                    <Border Grid.Column="2" Width="60" CornerRadius="10" Height="21" BorderBrush="#FFBBBBBB" BorderThickness="1" Background="Transparent" >
+                                        <TextBlock Text="See All >"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11"/>
+                                    </Border>
+                                </Grid>
+                                <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <TextBlock Text="Basta naay table diri mens"/>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Row="2" Margin="0 5 0 0">
+                            <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Rectangle.Effect>
+                                    <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Grid  Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Grid.Column="1" Text="Registration Progress" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
+                                    <Border Grid.Column="2" Width="30" CornerRadius="10" Height="21" BorderBrush="#FFBBBBBB" BorderThickness="1" Background="Transparent" >
+                                        <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11"/>
+                                    </Border>
+                                </Grid>
+                                <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <TextBlock Text="Basta naay bar graph mens"/>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5 0" >
+                        <Rectangle Fill="White" RadiusX="10" RadiusY="10">
+                            <Rectangle.Effect>
+                                <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Border Padding="10">
+                            <StackPanel>
+                                <TextBlock Text="Calendar" VerticalAlignment="Center" FontWeight="Medium" FontSize="20" FontFamily="Roboto" Margin="0 10"/>
+                                <Calendar CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" CalendarItemStyle="{DynamicResource CalendarItemStyle1}" Style="{DynamicResource CalendarStyle1}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
                 </Grid>
                 <Grid x:Name="EVENTS_PANEL" Grid.Row="1" Visibility="Hidden">
                     <TextBlock Text="Kania kay Events"/>
