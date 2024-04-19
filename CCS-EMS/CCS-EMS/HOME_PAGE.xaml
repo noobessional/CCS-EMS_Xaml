@@ -124,7 +124,7 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~ THIS PART IS THE MAIN AREA OF EACH MENUS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                 
                 <!-- Announcement Panel -->
-                <Grid x:Name="ANNOUNCEMENT_PANEL" Grid.Row="1" Visibility="Visible">
+                <Grid x:Name="ANNOUNCEMENT_PANEL" Grid.Row="1" Visibility="Hidden">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2.5*"/>
                         <ColumnDefinition Width="1*"/>
@@ -207,8 +207,87 @@
                         </Border>
                     </Grid>
                 </Grid>
-                <Grid x:Name="EVENTS_PANEL" Grid.Row="1" Visibility="Hidden">
-                    <TextBlock Text="Kania kay Events"/>
+                <Grid x:Name="EVENTS_PANEL" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer Grid.Column="0">
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="Events" FontFamily="Roboto" FontSize="25" FontWeight="Medium" VerticalAlignment="Center" Margin="0 10"/>
+                                <Grid>
+                                    <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" Height="250">
+                                        <Rectangle.Effect>
+                                            <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                                        </Rectangle.Effect>
+                                    </Rectangle>
+                                    <Grid  Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="5*"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <TextBlock Grid.Column="1" Text="Event/s" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
+                                            <Border Grid.Column="2" Width="30" CornerRadius="10" Height="21" Background="#925FE2" >
+                                                <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11" Foreground="White"/>
+                                            </Border>
+                                        </Grid>
+                                        <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TextBlock Text="Basta naay card dri"/>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                                <Grid>
+                                    <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" Height="250">
+                                        <Rectangle.Effect>
+                                            <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                                        </Rectangle.Effect>
+                                    </Rectangle>
+                                    <Grid  Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="5*"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <TextBlock Grid.Column="1" Text="Merchandise" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
+                                            <Border Grid.Column="2" Width="30" CornerRadius="10" Height="21" Background="#925FE2" >
+                                                <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11" Foreground="White"/>
+                                            </Border>
+                                        </Grid>
+                                        <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TextBlock Text="Basta naay card diri"/>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                    <Grid Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5 0" >
+                        <Rectangle Fill="White" RadiusX="10" RadiusY="10">
+                            <Rectangle.Effect>
+                                <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Border Padding="10">
+                            <StackPanel>
+                                <TextBlock Text="Calendar" VerticalAlignment="Center" FontWeight="Medium" FontSize="20" FontFamily="Roboto" Margin="0 10"/>
+                                <Calendar CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" CalendarItemStyle="{DynamicResource CalendarItemStyle1}" Style="{DynamicResource CalendarStyle1}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
                 </Grid>
                 <Grid x:Name="USERS_PANEL" Grid.Row="1" Visibility="Hidden">
                     <TextBlock Text="Kania kay Users"/>
