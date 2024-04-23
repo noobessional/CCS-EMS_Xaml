@@ -29,7 +29,7 @@ namespace CCS_EMS
         private void RemovePlaceholderText(object sender, RoutedEventArgs e)
         {
             TextBox textBox = sender as TextBox;
-            if (textBox != null && textBox.Text == "Username")
+            if (textBox != null && textBox.Text == "ID" || textBox.Text == "Last Name" || textBox.Text == "First Name" || textBox.Text == "Email")
             {
                 textBox.Text = "";
                 textBox.Foreground = Brushes.White;
@@ -41,34 +41,130 @@ namespace CCS_EMS
             TextBox textBox = sender as TextBox;
             if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
             {
-                textBox.Text = "Username";
+                textBox.Text = "ID";
+                textBox.Foreground = new SolidColorBrush(Color.FromRgb(125, 125, 125));
+            }
+        }
+        private void RestorePlaceholderTextLNAME(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = "Last Name";
+                textBox.Foreground = new SolidColorBrush(Color.FromRgb(125, 125, 125));
+            }
+        }
+        private void RestorePlaceholderTextFNAME(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = "First Name";
+                textBox.Foreground = new SolidColorBrush(Color.FromRgb(125, 125, 125));
+            }
+        }
+        private void RestorePlaceholderTextEMAIL(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = "Last Name";
                 textBox.Foreground = new SolidColorBrush(Color.FromRgb(125, 125, 125));
             }
         }
         private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            PasswordPlaceholder.Visibility = Visibility.Collapsed;
-            PasswordPlaceholder.IsHitTestVisible = false;
+            PasswordBox passwordBox = sender as PasswordBox;
+            if (passwordBox != null)
+            {
+                if (passwordBox.Name == "PASSWORD_BOX_REG")
+                {
+                    PASSWORD_PLACEHOLDER_REG.Visibility = Visibility.Collapsed;
+                    PASSWORD_PLACEHOLDER_REG.IsHitTestVisible = false;
+                }
+                else if (passwordBox.Name == "PASSWORD_BOX_REG_CON")
+                {
+                    PASSWORD_PLACEHOLDER_REG_CON.Visibility = Visibility.Collapsed;
+                    PASSWORD_PLACEHOLDER_REG_CON.IsHitTestVisible = false;
+                }
+                else if (passwordBox.Name == "PASSWORD_BOX_LOGIN")
+                {
+                    PASSWORD_PLACEHOLDER_LOGIN.Visibility = Visibility.Collapsed;
+                    PASSWORD_PLACEHOLDER_LOGIN.IsHitTestVisible = false;
+                }
+            }
         }
 
         private void PasswordBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(PasswordBox.Password))
+            PasswordBox passwordBox = sender as PasswordBox;
+            if (passwordBox != null)
             {
-                PasswordPlaceholder.Visibility = Visibility.Visible;
-                PasswordPlaceholder.IsHitTestVisible = false;
+                if (passwordBox.Name == "PASSWORD_BOX_REG")
+                {
+                    if (string.IsNullOrEmpty(passwordBox.Password))
+                    {
+                        PASSWORD_PLACEHOLDER_REG.Visibility = Visibility.Visible;
+                        PASSWORD_PLACEHOLDER_REG.IsHitTestVisible = false;
+                    }
+                }
+                else if (passwordBox.Name == "PASSWORD_BOX_REG_CON")
+                {
+                    if (string.IsNullOrEmpty(passwordBox.Password))
+                    {
+                        PASSWORD_PLACEHOLDER_REG_CON.Visibility = Visibility.Visible;
+                        PASSWORD_PLACEHOLDER_REG_CON.IsHitTestVisible = false;
+                    }
+                }
+                else if (passwordBox.Name == "PASSWORD_BOX_LOGIN")
+                {
+                    if (string.IsNullOrEmpty(passwordBox.Password))
+                    {
+                        PASSWORD_PLACEHOLDER_LOGIN.Visibility = Visibility.Visible;
+                        PASSWORD_PLACEHOLDER_LOGIN.IsHitTestVisible = false;
+                    }
+                }
             }
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(PasswordBox.Password))
+            PasswordBox passwordBox = sender as PasswordBox;
+            if (passwordBox != null)
             {
-                PasswordPlaceholder.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                PasswordPlaceholder.Visibility = Visibility.Visible;
+                if (passwordBox.Name == "PASSWORD_BOX_REG")
+                {
+                    if (!string.IsNullOrEmpty(passwordBox.Password))
+                    {
+                        PASSWORD_PLACEHOLDER_REG.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        PASSWORD_PLACEHOLDER_REG.Visibility = Visibility.Visible;
+                    }
+                }
+                else if (passwordBox.Name == "PASSWORD_BOX_REG_CON")
+                {
+                    if (!string.IsNullOrEmpty(passwordBox.Password))
+                    {
+                        PASSWORD_PLACEHOLDER_REG.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        PASSWORD_PLACEHOLDER_REG.Visibility = Visibility.Visible;
+                    }
+                }
+                else if (passwordBox.Name == "PASSWORD_BOX_LOGIN")
+                {
+                    if (!string.IsNullOrEmpty(passwordBox.Password))
+                    {
+                        PASSWORD_PLACEHOLDER_LOGIN.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        PASSWORD_PLACEHOLDER_LOGIN.Visibility = Visibility.Visible;
+                    }
+                }
             }
         }
         //-----------------------------------------------
@@ -84,6 +180,18 @@ namespace CCS_EMS
         {
             this.Cursor = Cursors.Arrow;
             LOGIN_BUTTON.Background = new SolidColorBrush(Color.FromRgb(149, 95, 226));
+        }
+
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            LOGIN_AREA.Visibility = Visibility.Hidden;
+            REGISTER_AREA.Visibility = Visibility.Visible;
+        }
+
+        private void REG_BACK_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            LOGIN_AREA.Visibility = Visibility.Visible;
+            REGISTER_AREA.Visibility = Visibility.Hidden;
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿<Application x:Class="CCS_EMS.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:CCS_EMS"
-             StartupUri="HOME_PAGE.xaml">
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"                
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
 
         <Style x:Key="CCS_LOGO" TargetType="Image">
@@ -301,7 +301,7 @@
                                     </VisualState>
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
-                            <Rectangle x:Name="TodayBackground" Fill="#925FE2" Opacity="0" RadiusX="15" RadiusY="15"/>
+                            <Rectangle x:Name="TodayBackground" Fill="#7BD47E" Opacity="0" RadiusX="15" RadiusY="15"/>
                             <Rectangle x:Name="SelectedBackground" Fill="#FF834DD8" Opacity="0" RadiusX="15" RadiusY="15"/>
                             <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
                             <Rectangle x:Name="HighlightBackground" Fill="#FFB99EE4" Opacity="0" RadiusX="15" RadiusY="15"/>

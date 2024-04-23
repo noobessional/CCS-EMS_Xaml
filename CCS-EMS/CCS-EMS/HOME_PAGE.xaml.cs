@@ -23,5 +23,12 @@ namespace CCS_EMS
         {
             InitializeComponent();
         }
+
+        private void EVENT_1_BUTTON_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            EVENT_VIEW ev = new EVENT_VIEW();
+            ev.Show();
+            this.DARK_BACKGROUND.Visibility = Visibility.Visible;
+        }
     }
 }
