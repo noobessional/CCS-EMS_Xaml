@@ -83,10 +83,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="EVENT_VIEW.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="HOME_PAGE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,9 +94,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="EVENT_VIEW.xaml.cs">
-      <DependentUpon>EVENT_VIEW.xaml</DependentUpon>
     </Compile>
     <Compile Include="HOME_PAGE.xaml.cs">
       <DependentUpon>HOME_PAGE.xaml</DependentUpon>
@@ -144,10 +137,8 @@
     <Resource Include="IMAGES\Default\backgroundlogin.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="IMAGES\Default\haerin.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="IMAGES\Default\cryingcatmeme.jpg" />
+    <Resource Include="IMAGES\Default\haerin.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

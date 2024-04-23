@@ -14,7 +14,7 @@
                     <ColumnDefinition x:Name="LOGIN_PANEL" Width="4*"/>
                     <ColumnDefinition x:Name="WELCOME_PANEL" Width="5*"/>
                 </Grid.ColumnDefinitions>
-                <Border x:Name="REGISTER_AREA" Grid.Column="0" Background="#1C1D21" CornerRadius="10 0 0 10" Padding="40 20">
+                <Border x:Name="REGISTER_AREA" Grid.Column="0" Background="#1C1D21" CornerRadius="10 0 0 10" Padding="40 20" Visibility="Hidden">
                     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Icon:PackIconMaterial x:Name="REG_BACK" Kind="ArrowLeft" Width="20" Foreground="White" Margin="-30 5" MouseLeftButtonDown="REG_BACK_MouseLeftButtonDown" />
                         <StackPanel>
@@ -60,7 +60,7 @@
                         </StackPanel>
                     </Grid>
                 </Border>
-                <Border x:Name="LOGIN_AREA"  Grid.Column="0" Background="#1C1D21" CornerRadius="10 0 0 10" Padding="60 20" Visibility="Hidden">
+                <Border x:Name="LOGIN_AREA"  Grid.Column="0" Background="#1C1D21" CornerRadius="10 0 0 10" Padding="60 20">
                     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel>
                             <Image Style="{StaticResource CCS_LOGO}" Source="/IMAGES/Default/ccs_logo.png"/>
