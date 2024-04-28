@@ -5,8 +5,302 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CCS_EMS"
         mc:Ignorable="d"
-        Title="HOME_PAGE" Height="450" Width="800">
+        Title="HOME_PAGE" Height="600" Width="900" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="White" AllowsTransparency="True" ResizeMode="NoResize">
     <Grid>
-        <TextBlock Text="Mao kini ang Main Window Home Page" FontSize="40" FontWeight="Bold"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="MENU" Width="1*"/>
+            <ColumnDefinition x:Name="SPLITTER" Width="auto"/>
+            <ColumnDefinition x:Name="MAIN_PAGE" Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="Transparent" Padding="10">
+            <Border Background="#925FE2" CornerRadius="15" Padding="10 20">
+                <StackPanel>
+                    <Image Style="{StaticResource CCS_LOGO2}" Source="/IMAGES/Default/ccs_logo.png"/>
+                    <Grid Height="20"/>
+                    <Grid x:Name="ANNOUNCEMENT_BUTTON" Height="30" HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Announcement" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Height="5"/>
+                    <Grid x:Name="EVENT_BUTTON" Height="30" HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Events" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Height="5"/>
+                    <Grid x:Name="USERS_BUTTON" Height="30" HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Users" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Height="5"/>
+                    <Grid x:Name="MESSAGE_BUTTON" Height="30" HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Message" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Height="5"/>
+                    <Grid x:Name="REPORT_BUTTON" Height="30" HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Reports" Style="{StaticResource MENU_BUTTON}"/>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Border>
+        <!-- <GridSplitter Grid.Column="1" Background="Black" Width="5" HorizontalAlignment="Stretch"/> -->
+        <Border Grid.Column="2" Padding="0 10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="12*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="CCS-Event Management System" FontWeight="Medium" FontSize="20"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+
+                            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Tarunga daw ni gaw kanang macenter ang image ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                            <!-- ~~~~~~~~~~~~~~~~~~~~ Baseha lang sa App.xaml gaw tas ako lang i comment kung asa dapita ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                            <Image Source="IMAGES/Default/haerin.jpg" Style="{StaticResource PROFILE_PICTURE}"/>
+                            <Border CornerRadius="15" Width="30" Height="30" BorderBrush="#925FE2" Background="Transparent" BorderThickness="2"/>
+                            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        </Grid>
+                        <Grid Grid.Column="1" VerticalAlignment="Center">
+                            <StackPanel>
+                                <TextBlock Text="Kang Haerin" FontFamily="Roboto" FontWeight="Medium"/>
+                                <TextBlock Text="Admin" FontFamily="Roboto" FontSize="10"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~ THIS PART IS THE MAIN AREA OF EACH MENUS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                <!-- Announcement Panel -->
+                <Grid x:Name="ANNOUNCEMENT_PANEL" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Welcome, Kang Haerin!" FontFamily="Roboto" FontSize="25" FontWeight="Medium" VerticalAlignment="Center" Margin="0 10"/>
+                        <Grid Grid.Row="1" Margin="0 0 0 5">
+                            <Rectangle Fill="#925FE2" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Rectangle.Effect>
+                                    <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Grid  Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Grid.Column="1" Text="Announcement" VerticalAlignment="Center" FontWeight="Medium" FontSize="20" FontFamily="Roboto"/>
+                                    <Border Grid.Column="2" Width="60" CornerRadius="10" Height="21" BorderBrush="#FFBBBBBB" BorderThickness="1" Background="Transparent" >
+                                        <TextBlock Text="See All >"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11"/>
+                                    </Border>
+                                </Grid>
+                                <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <TextBlock Text="Basta naay table diri mens"/>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Row="2" Margin="0 5 0 0">
+                            <Rectangle Fill="#925FE2" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Rectangle.Effect>
+                                    <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Grid  Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="7*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Width="26"/>
+                                    <TextBlock Grid.Column="1" Text="Registration Progress" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto" Grid.ColumnSpan="2" Height="22"/>
+                                    <Border Grid.Column="2" CornerRadius="10" BorderBrush="#FFBBBBBB" BorderThickness="1" Background="Transparent" Margin="157,14,0,14" >
+                                        <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11"/>
+                                    </Border>
+                                </Grid>
+                                <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <TextBlock Text="Basta naay bar graph mens"/>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5 0" >
+                        <Rectangle Fill="White" RadiusX="10" RadiusY="10">
+                            <Rectangle.Effect>
+                                <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Border Padding="10">
+                            <StackPanel>
+                                <TextBlock Text="Calendar" VerticalAlignment="Center" FontWeight="Medium" FontSize="20" FontFamily="Roboto" Margin="0 10"/>
+                                <Calendar CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" CalendarItemStyle="{DynamicResource CalendarItemStyle1}" Style="{DynamicResource CalendarStyle1}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Grid>
+                <Grid x:Name="EVENTS_PANEL" Grid.Row="1" Visibility="Hidden">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer Grid.Column="0">
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="Events" FontFamily="Roboto" FontSize="25" FontWeight="Medium" VerticalAlignment="Center" Margin="0 10"/>
+                                <Grid>
+                                    <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" Height="250">
+                                        <Rectangle.Effect>
+                                            <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                                        </Rectangle.Effect>
+                                    </Rectangle>
+                                    <Grid  Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="5*"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <TextBlock Grid.Column="1" Text="Event/s" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
+                                            <Border Grid.Column="2" Width="30" CornerRadius="10" Height="21" Background="#925FE2" >
+                                                <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11" Foreground="White"/>
+                                            </Border>
+                                        </Grid>
+                                        <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TextBlock Text="Basta naay card dri"/>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                                <Grid>
+                                    <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" Height="250">
+                                        <Rectangle.Effect>
+                                            <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                                        </Rectangle.Effect>
+                                    </Rectangle>
+                                    <Grid  Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="5*"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <TextBlock Grid.Column="1" Text="Merchandise" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
+                                            <Border Grid.Column="2" Width="30" CornerRadius="10" Height="21" Background="#925FE2" >
+                                                <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11" Foreground="White"/>
+                                            </Border>
+                                        </Grid>
+                                        <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TextBlock Text="Basta naay card diri"/>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                    <Grid Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5 0" >
+                        <Rectangle Fill="White" RadiusX="10" RadiusY="10">
+                            <Rectangle.Effect>
+                                <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Border Padding="10">
+                            <StackPanel>
+                                <TextBlock Text="Calendar" VerticalAlignment="Center" FontWeight="Medium" FontSize="20" FontFamily="Roboto" Margin="0 10"/>
+                                <Calendar CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" CalendarItemStyle="{DynamicResource CalendarItemStyle1}" Style="{DynamicResource CalendarStyle1}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Grid>
+                <Grid x:Name="USERS_PANEL" Grid.Row="1" Visibility="Hidden">
+                    <TextBlock Text="Kania kay Users"/>
+                </Grid>
+                <Grid x:Name="MESSAGE_PANEL" Grid.Row="1" Visibility="Hidden">
+                    <TextBlock Text="Kania kay Message"/>
+                </Grid>
+                <Grid x:Name="REPORTS_PANEL" Grid.Row="1" Visibility="Hidden">
+                    <TextBlock Text="Kania kay Reports"/>
+                </Grid>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END OF MAIN AREA ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            </Grid>
+        </Border>
     </Grid>
 </Window>
