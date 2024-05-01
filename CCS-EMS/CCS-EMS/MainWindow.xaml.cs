@@ -182,7 +182,7 @@ namespace CCS_EMS
             LOGIN_BUTTON.Background = new SolidColorBrush(Color.FromRgb(149, 95, 226));
         }
 
-        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void REG_BUTTON_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             LOGIN_AREA.Visibility = Visibility.Hidden;
             REGISTER_AREA.Visibility = Visibility.Visible;
@@ -192,6 +192,16 @@ namespace CCS_EMS
         {
             LOGIN_AREA.Visibility = Visibility.Visible;
             REGISTER_AREA.Visibility = Visibility.Hidden;
+        }
+
+        private void REG_BUTTON_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void REG_BUTTON_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
         }
     }
 }

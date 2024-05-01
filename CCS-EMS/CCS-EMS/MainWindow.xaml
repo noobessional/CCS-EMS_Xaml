@@ -75,7 +75,7 @@
                                 <TextBlock x:Name="PASSWORD_PLACEHOLDER_LOGIN" Text="Password" Style="{StaticResource PASSWORD_PLACEHOLDER}" Visibility="Visible" IsHitTestVisible="False"/>
                             </Grid>
                             <Grid Margin="0 5 0 5">
-                                <TextBlock Text="Need an account? Click here" FontSize="8" FontFamily="Roboto" TextDecorations="Underline" Foreground="White" HorizontalAlignment="Left" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+                                <TextBlock x:Name="REG_BUTTON" Text="Need an account? Click here" FontSize="8" FontFamily="Roboto" TextDecorations="Underline" Foreground="White" HorizontalAlignment="Left" MouseLeftButtonDown="REG_BUTTON_MouseLeftButtonDown" MouseEnter="REG_BUTTON_MouseEnter" MouseLeave="REG_BUTTON_MouseLeave"/>
                             </Grid>
                             <Button x:Name="LOGIN_BUTTON" Content="Login" Style="{StaticResource LOGIN_BUTTON}" MouseEnter="LOGIN_BUTTON_MouseEnter" MouseLeave="LOGIN_BUTTON_MouseLeave"/>
                         </StackPanel>

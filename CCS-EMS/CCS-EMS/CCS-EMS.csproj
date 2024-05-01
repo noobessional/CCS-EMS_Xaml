@@ -83,6 +83,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="EVENT_CREATE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EVENT_VIEW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HOME_PAGE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +103,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EVENT_CREATE.xaml.cs">
+      <DependentUpon>EVENT_CREATE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EVENT_VIEW.xaml.cs">
+      <DependentUpon>EVENT_VIEW.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HOME_PAGE.xaml.cs">
       <DependentUpon>HOME_PAGE.xaml</DependentUpon>
     </Compile>
@@ -102,8 +116,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MERCH_CREATE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MERCH_VIEW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MERCH_CREATE.xaml.cs">
+      <DependentUpon>MERCH_CREATE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MERCH_VIEW.xaml.cs">
+      <DependentUpon>MERCH_VIEW.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -139,6 +167,15 @@
   <ItemGroup>
     <Resource Include="IMAGES\Default\cryingcatmeme.jpg" />
     <Resource Include="IMAGES\Default\haerin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMAGES\Default\tshirt-intrams-a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMAGES\Default\tshirt-intrams-b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMAGES\Default\happyhappy.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

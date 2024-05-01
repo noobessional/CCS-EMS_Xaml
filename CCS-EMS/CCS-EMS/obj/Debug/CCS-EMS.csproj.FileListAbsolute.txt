@@ -23,3 +23,11 @@ C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\bin\Debug
 C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
 C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\bin\Debug\MahApps.Metro.IconPacks.Material.xml
 C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\CCS-EMS.csproj.CopyComplete
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\EVENT_VIEW.g.cs
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\EVENT_VIEW.baml
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\EVENT_CREATE.g.cs
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\EVENT_CREATE.baml
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\MERCH_VIEW.g.cs
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\MERCH_VIEW.baml
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\MERCH_CREATE.g.cs
+C:\Users\joema\OneDrive\Documents\CCS-EMS\CCS-EMS_Xaml\CCS-EMS\CCS-EMS\obj\Debug\MERCH_CREATE.baml

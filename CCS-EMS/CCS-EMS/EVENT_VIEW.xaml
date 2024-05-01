@@ -1,0 +1,257 @@
+﻿<Window x:Class="CCS_EMS.EVENT_VIEW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CCS_EMS"
+        mc:Ignorable="d"
+        Title="EVENT_VIEW" Height="700" Width="700" WindowStartupLocation="CenterScreen" WindowStyle="None" BorderThickness="0" Background="#EFEFEF">
+    <Grid>
+        <Grid x:Name="EDIT_EVENT_PAN" Height="Auto" Visibility="Hidden">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel Margin="20">
+                    <Grid Height="400">
+                        <Rectangle HorizontalAlignment="Stretch">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/IMAGES/Default/cryingcatmeme.jpg" Stretch="UniformToFill"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Border Width="50" Height="50" Background="#575757" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" CornerRadius="10">
+                            <Icon:PackIconMaterial Kind="ImageEdit" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="20">
+                        <StackPanel>
+                            <Grid Height="60">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                                    <TextBox x:Name="EDIT_EVENT_NAME_TXT" Text="ICT-Congress 2024" Background="Transparent" BorderBrush="Transparent" Foreground="#FF5B5B5B" VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="10 0"/>
+                                </Border>
+                                <Border Grid.Column="0" Width="60" Height="10" Background="#EFEFEF" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 5 0 0">
+                                    <TextBlock Text="Event Name" Foreground="#FF5B5B5B" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <Border Grid.Column="1" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                                    <Grid Margin=" 0 0 10 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0" Margin="10">
+                                            <Icon:PackIconMaterial Kind="CalendarStart" Width="20" Height="20" Foreground="Gray" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                            <TextBlock Text="Start date" FontSize="10" Foreground="Gray"/>
+                                            <TextBlock Text="Apr 12, 2024" FontSize="13" Foreground="#FF5B5B5B" Margin="0 -5 0 0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Column="2" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0" Margin="10 0">
+                                            <Icon:PackIconMaterial Kind="ClockStart" Width="20" Height="20" Foreground="Gray" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                            <TextBlock Text="Start time" FontSize="10" Foreground="Gray"/>
+                                            <TextBlock Text="12:00 PM" FontSize="13" Foreground="#FF5B5B5B" Margin="0 -5 0 0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                            <Grid Height="60">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.25*"/>
+                                    <ColumnDefinition Width=".75*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                                    <TextBox x:Name="EDIT_EVENT_LOCATION_TXT" Text="IEC Convention" Background="Transparent" BorderBrush="Transparent" Foreground="#FF5B5B5B" VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="10 0"/>
+                                </Border>
+                                <Border Grid.Column="0" Width="40" Height="10" Background="#EFEFEF" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 5 0 0">
+                                    <TextBlock Text="Location" Foreground="#FF5B5B5B" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <Border Grid.Column="1" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                                    <TextBox x:Name="EDIT_EVENT_LIMIT_TXT" Text="750" Background="Transparent" BorderBrush="Transparent" Foreground="#FF5B5B5B" VerticalAlignment="Center" HorizontalAlignment="Stretch" Padding="10 0"/>
+                                </Border>
+                                <Border Grid.Column="1" Width="30" Height="10" Background="#EFEFEF" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 5 0 0">
+                                    <TextBlock Text="Limit" Foreground="#FF5B5B5B" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <Border Grid.Column="2" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                                    <Grid Margin=" 0 0 10 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0" Margin="10">
+                                            <Icon:PackIconMaterial Kind="CalendarEnd" Width="20" Height="20" Foreground="Gray" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                            <TextBlock Text="End date" FontSize="10" Foreground="Gray"/>
+                                            <TextBlock Text="Apr 12, 2024" FontSize="13" Foreground="#FF5B5B5B" Margin="0 -5 0 0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Column="3" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0" Margin="10 0">
+                                            <Icon:PackIconMaterial Kind="ClockEnd" Width="20" Height="20" Foreground="Gray" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                            <TextBlock Text="End time" FontSize="10" Foreground="Gray"/>
+                                            <TextBlock Text="6:00 PM" FontSize="13" Foreground="#FF5B5B5B" Margin="0 -5 0 0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                            <!--TextWrapping="Wrap" AcceptsReturn="True" Height="Auto" HorizontalAlignment="Stretch" BorderThickness="0" IsReadOnly="True" HorizontalContentAlignment="Stretch"-->
+                            <Grid>
+                                <Border Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                                    <TextBox x:Name="EDIT_EVENT_DETAILS_TXT" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt convallis ligula, non dapibus leo. Duis vehicula lorem sit amet odio lacinia vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce eleifend eros et velit congue sodales. Aliquam erat volutpat. Donec eget eros vel nisi convallis efficitur. Curabitur accumsan purus sed neque congue, nec lobortis est convallis. Cras vel arcu varius, dapibus velit nec, tempor arcu. Fusce euismod justo id neque fermentum, id vestibulum nulla consequat. Aliquam in eros sed mi condimentum euismod. Integer in arcu libero. Phasellus non ligula urna. Sed auctor vestibulum turpis, eu rhoncus mauris eleifend non. Ut ultrices nunc in elit gravida, sed commodo sapien accumsan. Nam auctor, leo in vehicula gravida, justo eros sollicitudin magna, eget fermentum enim lacus non libero. Vivamus ut lectus purus. Sed lobortis nisi non efficitur suscipit. Sed vestibulum vel eros id fermentum.
+
+In hac habitasse platea dictumst. Ut pellentesque placerat turpis. Nulla facilisi. Sed a massa nec lorem consequat viverra vel vel turpis. Integer auctor convallis purus, nec elementum eros ullamcorper et. Proin suscipit metus quis lorem lobortis vulputate. Cras nec libero ut nulla venenatis tristique. Phasellus consequat turpis quis nisi vulputate, id tempor tortor tempus. Vivamus sed rutrum felis. Duis vestibulum volutpat pulvinar. Phasellus aliquet, nunc nec pharetra ultricies, velit lectus luctus metus, sed sagittis tellus arcu id metus. Vivamus nec arcu nisl. Maecenas tempus dolor id eros iaculis lobortis. Curabitur euismod mauris vitae tortor auctor hendrerit. Etiam vulputate orci eu vestibulum ultrices. Vivamus eu libero auctor, convallis lectus in, dictum leo." Background="Transparent" BorderBrush="Transparent" Foreground="#FF5B5B5B" TextWrapping="Wrap" AcceptsReturn="True" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="10"/>
+                                </Border>
+                                <Border Width="60" Height="10" Background="#EFEFEF" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 5 0 0">
+                                    <TextBlock Text="Event Details" Foreground="#FF5B5B5B" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button x:Name="EDIT_EVENT_CANCEL_BUTTON" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5" Style="{StaticResource CANCEL_BUTTON}" Width="75" Height="30" Content="Cancel" MouseEnter="EDIT_EVENT_CANCEL_BUTTON_MouseEnter" MouseLeave="EDIT_EVENT_CANCEL_BUTTON_MouseLeave" Click="EDIT_EVENT_CANCEL_BUTTON_Click"/>
+                        <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5" Style="{StaticResource LOGIN_BUTTON}" Width="75" Height="30" Content="Edit"/>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Grid x:Name="EVENT_VIEW_PAN" Height="Auto">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Grid>
+                    <Rectangle HorizontalAlignment="Stretch" Height="440" VerticalAlignment="Top">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/IMAGES/Default/cryingcatmeme.jpg" Stretch="UniformToFill"/>
+                        </Rectangle.Fill>
+                        <Rectangle.Effect>
+                            <BlurEffect Radius="50" />
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <StackPanel  Margin="20 20 5 20">
+                        <Grid Height="400">
+                            <Rectangle HorizontalAlignment="Stretch">
+                                <Rectangle.Fill>
+                                    <ImageBrush ImageSource="/IMAGES/Default/cryingcatmeme.jpg" Stretch="UniformToFill"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Border Width="90" Height="90" Background="#925FE2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" CornerRadius="10">
+                                <Border Margin="0 20 0 0" Background="#FF2F2F2F" CornerRadius="0 0 10 10">
+                                    <TextBlock Text="12" FontSize="50" Foreground="White" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+                            </Border>
+                        </Grid>
+                        <Grid Margin="10 0">
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="APRIL 12 12 PM - 6 PM" FontSize="15" FontWeight="Medium" Foreground="#FF4545"/>
+                                    <TextBlock Text="Scheduled" Grid.Column="1" FontSize="15" FontWeight="Medium" Foreground="#00C614" HorizontalAlignment="Right"/>
+                                </Grid>
+                                <TextBlock Text="ICT-Congress 2024" FontSize="30" FontWeight="Bold"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="IEC Convention" FontSize="15" FontWeight="Medium" VerticalAlignment="Top" Foreground="#FF636363"/>
+                                    <Button Grid.Column="1" x:Name="PAY_BUTTON" Content="Pay for Student" Style="{StaticResource LOGIN_BUTTON}" Margin="10 0"/>
+                                    <Border x:Name="MENU_BUTTON" Grid.Column="2" Width="50" CornerRadius="5" Height="25" Background="#925FE2" MouseLeftButtonDown="MENU_BUTTON_MouseLeftButtonDown" >
+                                        <TextBlock Text="• • •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11" Foreground="White"/>
+                                    </Border>
+                                </Grid>
+                                <Separator Margin="0 5"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0">
+                                        <Grid Margin="5"/>
+                                        <Grid HorizontalAlignment="Left">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Viewbox Width="15">
+                                                    <Path Data="M19.6375 15.8875C20.863 14.9234 21.7575 13.6012 22.1965 12.105C22.6356 10.6087 22.5974 9.01287 22.0872 7.53937C21.5771 6.06587 20.6203 4.78802 19.3501 3.8836C18.0799 2.97918 16.5593 2.49316 15 2.49316C13.4407 2.49316 11.9201 2.97918 10.6499 3.8836C9.37968 4.78802 8.42293 6.06587 7.91276 7.53937C7.4026 9.01287 7.36439 10.6087 7.80345 12.105C8.24251 13.6012 9.13701 14.9234 10.3625 15.8875C8.26259 16.7288 6.43035 18.1242 5.06111 19.9249C3.69187 21.7256 2.83695 23.8642 2.5875 26.1125C2.56944 26.2767 2.58389 26.4428 2.63003 26.6014C2.67616 26.7599 2.75308 26.9078 2.85639 27.0367C3.06502 27.2969 3.36848 27.4636 3.7 27.5C4.03152 27.5365 4.36395 27.4398 4.62415 27.2311C4.88436 27.0225 5.05103 26.7191 5.0875 26.3875C5.36198 23.944 6.5271 21.6873 8.36027 20.0485C10.1934 18.4097 12.5661 17.5038 15.025 17.5038C17.4839 17.5038 19.8566 18.4097 21.6897 20.0485C23.5229 21.6873 24.688 23.944 24.9625 26.3875C24.9965 26.6947 25.143 26.9784 25.3739 27.1838C25.6047 27.3892 25.9035 27.5019 26.2125 27.5H26.35C26.6777 27.4623 26.9772 27.2967 27.1832 27.0391C27.3892 26.7815 27.4851 26.453 27.45 26.125C27.1994 23.8703 26.3398 21.7263 24.9636 19.9228C23.5873 18.1193 21.7461 16.7244 19.6375 15.8875ZM15 15C14.0111 15 13.0444 14.7068 12.2221 14.1574C11.3999 13.608 10.759 12.8271 10.3806 11.9135C10.0022 10.9998 9.90314 9.99449 10.0961 9.02458C10.289 8.05468 10.7652 7.16376 11.4645 6.4645C12.1637 5.76524 13.0546 5.28903 14.0245 5.09611C14.9944 4.90318 15.9998 5.0022 16.9134 5.38064C17.827 5.75907 18.6079 6.39994 19.1573 7.22218C19.7068 8.04443 20 9.01113 20 10C20 11.3261 19.4732 12.5979 18.5355 13.5356C17.5978 14.4733 16.3261 15 15 15Z" Fill="Black"/>
+                                                </Viewbox>
+                                                <TextBlock Text="649 Registered Participants" FontSize="15" FontWeight="Medium" VerticalAlignment="Top" Margin="10 0 0 0"/>
+                                            </StackPanel>
+                                        </Grid>
+                                        <Grid HorizontalAlignment="Left">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Viewbox Width="15">
+                                                    <Path Data="M8.75 28.75H6.25H5V26.25H6.25V15V5V1.25H8.75V2.5H26.4059L22.6575 9.99989L26.4075 17.5H8.75V26.25H10V28.75H8.75ZM8.75 15V5H22.3616L19.8625 10.0001L22.3625 15H8.75Z" Fill="black"/>
+                                                </Viewbox>
+                                                <TextBlock Text="by UC CCS Department" FontSize="15" FontWeight="Medium" VerticalAlignment="Top" Margin="10 0 0 0"/>
+                                            </StackPanel>
+                                        </Grid>
+                                        <Grid HorizontalAlignment="Left">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Viewbox Width="15">
+                                                    <Path Data="M25.575 12.0374C25.3995 10.211 24.754 8.46125 23.7015 6.95842C22.6489 5.45559 21.2251 4.25094 19.5687 3.46176C17.9123 2.67259 16.0798 2.3258 14.2496 2.45515C12.4194 2.58451 10.6539 3.1856 9.12497 4.1999C7.81147 5.0782 6.70879 6.23652 5.89615 7.59164C5.08352 8.94675 4.58109 10.465 4.42497 12.0374C4.27183 13.5995 4.46832 15.176 5.00019 16.6527C5.53206 18.1294 6.38597 19.4692 7.49997 20.5749L14.125 27.2124C14.2412 27.3296 14.3794 27.4226 14.5318 27.486C14.6841 27.5495 14.8475 27.5821 15.0125 27.5821C15.1775 27.5821 15.3409 27.5495 15.4932 27.486C15.6455 27.4226 15.7838 27.3296 15.9 27.2124L22.5 20.5749C23.614 19.4692 24.4679 18.1294 24.9998 16.6527C25.5316 15.176 25.7281 13.5995 25.575 12.0374ZM20.75 18.8124L15 24.5624L9.24997 18.8124C8.40259 17.965 7.75348 16.9403 7.34931 15.8121C6.94514 14.6839 6.79595 13.4801 6.91247 12.2874C7.02975 11.0763 7.41468 9.90635 8.03944 8.8622C8.6642 7.81805 9.51317 6.92578 10.525 6.2499C11.8512 5.36894 13.4079 4.89902 15 4.89902C16.5921 4.89902 18.1488 5.36894 19.475 6.2499C20.4837 6.92317 21.3308 7.8115 21.9554 8.85107C22.58 9.89064 22.9666 11.0556 23.0875 12.2624C23.2078 13.4592 23.0605 14.6677 22.6562 15.8006C22.2519 16.9334 21.6008 17.9622 20.75 18.8124ZM15 7.4999C13.8875 7.4999 12.7999 7.8298 11.8749 8.44788C10.9499 9.06596 10.2289 9.94447 9.80315 10.9723C9.37741 12.0001 9.26601 13.1311 9.48306 14.2223C9.7001 15.3134 10.2358 16.3157 11.0225 17.1024C11.8092 17.889 12.8114 18.4248 13.9026 18.6418C14.9937 18.8589 16.1247 18.7475 17.1526 18.3217C18.1804 17.896 19.0589 17.175 19.677 16.25C20.2951 15.325 20.625 14.2374 20.625 13.1249C20.6217 11.6341 20.028 10.2052 18.9738 9.15107C17.9196 8.09689 16.4908 7.5032 15 7.4999ZM15 16.2499C14.3819 16.2499 13.7777 16.0666 13.2638 15.7232C12.7499 15.3799 12.3494 14.8918 12.1128 14.3208C11.8763 13.7498 11.8144 13.1214 11.935 12.5152C12.0556 11.909 12.3532 11.3522 12.7903 10.9152C13.2273 10.4782 13.7841 10.1805 14.3903 10.0599C14.9965 9.93936 15.6248 10.0013 16.1959 10.2378C16.7669 10.4743 17.2549 10.8748 17.5983 11.3887C17.9417 11.9026 18.125 12.5068 18.125 13.1249C18.125 13.9537 17.7957 14.7486 17.2097 15.3346C16.6236 15.9207 15.8288 16.2499 15 16.2499Z" Fill="black"/>
+                                                </Viewbox>
+                                                <TextBlock Text="IEC Convention Center Cebu" FontSize="15" FontWeight="Medium" VerticalAlignment="Top" Margin="10 0 0 0"/>
+                                                <Viewbox Width="10">
+                                                    <Path Data="M10.885 11.4712L10.7362 11.3749C10.576 11.309 10.3999 11.2921 10.2301 11.3264C10.0603 11.3606 9.90453 11.4445 9.78246 11.5674C9.69801 11.6451 9.63221 11.7408 9.58996 11.8474C9.54399 11.9553 9.52018 12.0714 9.51996 12.1887C9.52134 12.303 9.54512 12.416 9.58996 12.5212C9.68398 12.7314 9.8522 12.8997 10.0625 12.9937C10.1677 13.0385 10.2806 13.0623 10.395 13.0637C10.512 13.0615 10.6277 13.0378 10.7362 12.9937C10.8412 12.9484 10.9363 12.883 11.0162 12.8012C11.1792 12.6372 11.2706 12.4155 11.2706 12.1843C11.2706 11.9531 11.1792 11.7314 11.0162 11.5674L10.885 11.4712ZM10.395 5.24992C9.97746 5.24522 9.56593 5.34924 9.20081 5.55174C8.83569 5.75425 8.52954 6.04827 8.31246 6.40492C8.24915 6.50451 8.20664 6.61588 8.18748 6.73232C8.16833 6.84877 8.17293 6.96789 8.20101 7.08251C8.22908 7.19713 8.28006 7.30489 8.35086 7.3993C8.42166 7.49371 8.51083 7.57283 8.61299 7.63188C8.71516 7.69094 8.82822 7.72872 8.94537 7.74295C9.06252 7.75718 9.18134 7.74757 9.29468 7.71469C9.40801 7.68181 9.51353 7.62634 9.60487 7.55162C9.69622 7.47691 9.77151 7.38449 9.82621 7.27992C9.89076 7.19017 9.97641 7.11768 10.0756 7.06885C10.1748 7.02002 10.2845 6.99635 10.395 6.99992C10.569 6.99992 10.7359 7.06906 10.859 7.19213C10.9821 7.3152 11.0512 7.48212 11.0512 7.65617C11.0512 7.83022 10.9821 7.99714 10.859 8.12021C10.7359 8.24328 10.569 8.31242 10.395 8.31242C10.1629 8.31242 9.94033 8.40461 9.77624 8.5687C9.61214 8.7328 9.51996 8.95536 9.51996 9.18742C9.51996 9.41948 9.61214 9.64204 9.77624 9.80614C9.94033 9.97023 10.1629 10.0624 10.395 10.0624C11.0331 10.0624 11.6452 9.8089 12.0964 9.35765C12.5477 8.90639 12.8012 8.29435 12.8012 7.65617C12.8012 7.01799 12.5477 6.40595 12.0964 5.95469C11.6452 5.50343 11.0331 5.24992 10.395 5.24992ZM17.9025 8.46992C17.7864 7.1877 17.3396 5.95756 16.6056 4.89984C15.8715 3.84212 14.8755 2.99305 13.715 2.4357C12.5544 1.87835 11.2691 1.6318 9.98463 1.72019C8.70022 1.80857 7.46074 2.22885 6.38746 2.93992C5.468 3.55473 4.69613 4.36556 4.12728 5.31414C3.55844 6.26272 3.20674 7.32551 3.09746 8.42617C2.99025 9.51962 3.1278 10.6232 3.50011 11.6569C3.87242 12.6906 4.47015 13.6284 5.24996 14.4024L9.88746 19.0487C9.9688 19.1307 10.0656 19.1958 10.1722 19.2402C10.2788 19.2846 10.3932 19.3075 10.5087 19.3075C10.6242 19.3075 10.7386 19.2846 10.8452 19.2402C10.9518 19.1958 11.0486 19.1307 11.13 19.0487L15.75 14.4024C16.5298 13.6284 17.1275 12.6906 17.4998 11.6569C17.8721 10.6232 18.0097 9.51962 17.9025 8.42617V8.46992ZM14.525 13.1687L10.5 17.1937L6.47496 13.1687C5.88179 12.5755 5.42741 11.8582 5.14449 11.0685C4.86157 10.2787 4.75714 9.43609 4.83871 8.60117C4.9208 7.75339 5.19025 6.93443 5.62758 6.20353C6.06491 5.47263 6.65919 4.84804 7.36746 4.37492C8.29578 3.75825 9.38547 3.4293 10.5 3.4293C11.6144 3.4293 12.7041 3.75825 13.6325 4.37492C14.3386 4.84621 14.9315 5.46804 15.3688 6.19574C15.806 6.92344 16.0766 7.73895 16.1612 8.58367C16.2454 9.42142 16.1423 10.2674 15.8593 11.0604C15.5763 11.8534 15.1205 12.5735 14.525 13.1687Z" Fill="#486BE8"/>
+                                                </Viewbox>
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
+                                    <Border x:Name="MENUS" Grid.Row="1" Height="75" Width="100" Background="Transparent" CornerRadius="10" BorderBrush="#925FE2" BorderThickness="2" HorizontalAlignment="Right" Visibility="Hidden">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="1*"/>
+                                                <RowDefinition Height="1*"/>
+                                            </Grid.RowDefinitions>
+                                            <Border x:Name="EDIT_BUTTON" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseEnter="EDIT_BUTTON_MouseEnter" Background="Transparent" CornerRadius="10 10 0 0" MouseLeave="EDIT_BUTTON_MouseLeave" MouseLeftButtonDown="EDIT_BUTTON_MouseLeftButtonDown">
+                                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0">
+                                                    <Icon:PackIconMaterial Kind="FileEdit" Width="15" Foreground="#925FE2" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Edit" FontSize="15" FontWeight="Medium" Foreground="#925FE2" Margin="10 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                            <Border x:Name="ARCHIVE_BUTTON" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Background="Transparent" CornerRadius="0 0 10 10" MouseEnter="ARCHIVE_BUTTON_MouseEnter" MouseLeave="ARCHIVE_BUTTON_MouseLeave">
+                                                <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0">
+                                                    <Icon:PackIconMaterial Kind="Archive" Width="15" Foreground="#925FE2" VerticalAlignment="Center"/>
+                                                    <TextBlock Text="Archive" FontSize="15" FontWeight="Medium" Foreground="#925FE2" Margin="10 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </Border>
+                                </Grid>
+                                <Grid Margin="5"/>
+                                <TextBlock Text="Details" FontSize="20" FontWeight="Bold"/>
+                                <Grid Margin="5"/>
+                                <TextBox Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt convallis ligula, non dapibus leo. Duis vehicula lorem sit amet odio lacinia vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce eleifend eros et velit congue sodales. Aliquam erat volutpat. Donec eget eros vel nisi convallis efficitur. Curabitur accumsan purus sed neque congue, nec lobortis est convallis. Cras vel arcu varius, dapibus velit nec, tempor arcu. Fusce euismod justo id neque fermentum, id vestibulum nulla consequat. Aliquam in eros sed mi condimentum euismod. Integer in arcu libero. Phasellus non ligula urna. Sed auctor vestibulum turpis, eu rhoncus mauris eleifend non. Ut ultrices nunc in elit gravida, sed commodo sapien accumsan. Nam auctor, leo in vehicula gravida, justo eros sollicitudin magna, eget fermentum enim lacus non libero. Vivamus ut lectus purus. Sed lobortis nisi non efficitur suscipit. Sed vestibulum vel eros id fermentum.
+
+In hac habitasse platea dictumst. Ut pellentesque placerat turpis. Nulla facilisi. Sed a massa nec lorem consequat viverra vel vel turpis. Integer auctor convallis purus, nec elementum eros ullamcorper et. Proin suscipit metus quis lorem lobortis vulputate. Cras nec libero ut nulla venenatis tristique. Phasellus consequat turpis quis nisi vulputate, id tempor tortor tempus. Vivamus sed rutrum felis. Duis vestibulum volutpat pulvinar. Phasellus aliquet, nunc nec pharetra ultricies, velit lectus luctus metus, sed sagittis tellus arcu id metus. Vivamus nec arcu nisl. Maecenas tempus dolor id eros iaculis lobortis. Curabitur euismod mauris vitae tortor auctor hendrerit. Etiam vulputate orci eu vestibulum ultrices. Vivamus eu libero auctor, convallis lectus in, dictum leo." TextWrapping="Wrap" AcceptsReturn="True" Height="Auto" HorizontalAlignment="Stretch" BorderThickness="0" IsReadOnly="True" HorizontalContentAlignment="Stretch"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+    </Grid>
+</Window>

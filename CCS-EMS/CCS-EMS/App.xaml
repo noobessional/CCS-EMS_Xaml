@@ -2,8 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"                
-             StartupUri="MainWindow.xaml">
+             StartupUri="HOME_PAGE.xaml">
     <Application.Resources>
+        <!--#925FE2-->
 
         <Style x:Key="CCS_LOGO" TargetType="Image">
             <Setter Property="Width" Value="100"/>
@@ -69,12 +70,34 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="5" Padding="5">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="5" Padding="10 5">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+        </Style>
+        <Style x:Key="CANCEL_BUTTON" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#925FE2"/>
+            <Setter Property="BorderThickness" Value="4"/>
+            <Setter Property="Foreground" Value="#FF5B5B5B"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="5" Padding="5" BorderBrush="#925FE2" BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="MERCH_BUTTON" TargetType="Button">
+            <Setter Property="Background" Value="#925FE2"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#EFEFEF"/>
+            <Setter Property="FontWeight" Value="Medium"/>
         </Style>
         <Style x:Key="MENU_BUTTON" TargetType="TextBlock">
             <Setter Property="Foreground" Value="White"/>
@@ -633,7 +656,7 @@
                 <Style.Triggers>
                     <Trigger Property="Orientation" Value="Horizontal">
                         <Setter Property="Width" Value="Auto"/>
-                        <Setter Property="Height" Value="18" />
+                        <Setter Property="Height" Value="10" />
                         <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
                     </Trigger>
                     <Trigger Property="Orientation" Value="Vertical">
@@ -668,6 +691,9 @@
         </Style>
         
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ End of Scroll Bar Customization ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        
+        <!--DataGrid-->
+        
 
     </Application.Resources>
 </Application>

@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CCS_EMS"
         mc:Ignorable="d"
-        Title="HOME_PAGE" Height="600" Width="900" MinHeight="400" MinWidth="600" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#FFF2ECF7">
+        Title="HOME_PAGE" Height="600" Width="900" WindowState="Maximized" MinHeight="400" MinWidth="600" WindowStartupLocation="CenterScreen" Background="#FFF2ECF7">
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -209,7 +209,7 @@
                             </Border>
                         </Grid>
                     </Grid>
-                    <Grid x:Name="EVENTS_PANEL" Grid.Row="1">
+                    <Grid x:Name="EVENTS_PANEL" Grid.Row="1" Visibility="Hidden">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="200"/>
@@ -218,6 +218,68 @@
                             <Grid>
                                 <StackPanel>
                                     <TextBlock Text="Events" FontFamily="Roboto" FontSize="25" FontWeight="Medium" VerticalAlignment="Center" Margin="0 10"/>
+                                    <Grid>
+                                        <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" Height="250"/>
+                                        <Grid  Margin="10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="30"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="5*"/>
+                                                    <ColumnDefinition Width="auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0">
+                                                    <!--<Ellipse Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="#D052E3"/>-->
+                                                    <Icon:PackIconMaterial Kind="Calendar" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#925FE2"/>
+                                                </Grid>
+                                                <TextBlock Grid.Column="1" Text="Event/s" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
+                                                <Border x:Name="EVENT_ACTION_BUTTON" Grid.Column="2" Width="30" CornerRadius="10" Height="21" Background="#925FE2" MouseLeftButtonDown="EVENT_ACTION_BUTTON_MouseLeftButtonDown" >
+                                                    <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11" Foreground="White"/>
+                                                </Border>
+                                            </Grid>
+                                            <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                                <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10 10">
+                                                        <Grid x:Name="EVENT_1_BUTTON" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseLeftButtonDown="EVENT_1_BUTTON_MouseLeftButtonDown">
+                                                            <Rectangle VerticalAlignment="Stretch" RadiusY="10" RadiusX="10"  Width="150">
+                                                                <Rectangle.Fill>
+                                                                    <ImageBrush ImageSource="/IMAGES/Default/cryingcatmeme.jpg" Stretch="UniformToFill"/>
+                                                                </Rectangle.Fill>
+                                                            </Rectangle>
+                                                            <Border Height="75" VerticalAlignment="Bottom" Background="Black" CornerRadius="0 0 10 10" Opacity=".7">
+                                                                <StackPanel Margin="5" VerticalAlignment="Center">
+                                                                    <TextBlock Text="FRI, APR 12" Foreground="White" FontSize="8" FontWeight="Medium"/>
+                                                                    <TextBlock Text="ICT-Congress 2024" Foreground="White" FontSize="13" FontWeight="Medium"/>
+                                                                    <TextBlock Text="IEC Convention" Foreground="White" FontSize="8"/>
+                                                                    <TextBlock Text="649 Registered" Foreground="White" FontSize="6" FontWeight="Medium"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </Grid>
+                                                        <Separator Width="10"/>
+                                                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                                            <Rectangle VerticalAlignment="Stretch" RadiusY="10" RadiusX="10" Width="150">
+                                                                <Rectangle.Fill>
+                                                                    <ImageBrush ImageSource="/IMAGES/Default/happyhappy.jpg" Stretch="UniformToFill"/>
+                                                                </Rectangle.Fill>
+                                                            </Rectangle>
+                                                            <Border Height="75" VerticalAlignment="Bottom" Background="Black" CornerRadius="0 0 10 10" Opacity=".7">
+                                                                <StackPanel Margin="5" VerticalAlignment="Center">
+                                                                    <TextBlock Text="THU, APR 25" Foreground="White" FontSize="8" FontWeight="Medium"/>
+                                                                    <TextBlock Text="College Days" Foreground="White" FontSize="13" FontWeight="Medium"/>
+                                                                    <TextBlock Text="UCLM" Foreground="White" FontSize="8"/>
+                                                                    <TextBlock Text="347 Registered" Foreground="White" FontSize="6" FontWeight="Medium"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </Grid>
+                                                    </StackPanel>
+                                                </ScrollViewer>
+                                            </Border>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid Margin="5"/>
                                     <Grid>
                                         <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" Height="250">
                                             <Rectangle.Effect>
@@ -236,28 +298,27 @@
                                                     <ColumnDefinition Width="auto"/>
                                                 </Grid.ColumnDefinitions>
                                                 <Grid Grid.Column="0">
-                                                    <!--<Ellipse Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="#D052E3"/>-->
-                                                    <Icon:PackIconMaterial Kind="Calendar" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#925FE2"/>
+                                                    <Icon:PackIconMaterial Kind="TshirtV" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#925FE2"/>
                                                 </Grid>
-                                                <TextBlock Grid.Column="1" Text="Event/s" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
-                                                <Border Grid.Column="2" Width="30" CornerRadius="10" Height="21" Background="#925FE2" >
+                                                <TextBlock Grid.Column="1" Text="Merchandise" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
+                                                <Border x:Name="MERCH_ACTION_BUTTON" Grid.Column="2" Width="30" CornerRadius="10" Height="21" Background="#925FE2" MouseLeftButtonDown="MERCH_ACTION_BUTTON_MouseLeftButtonDown" >
                                                     <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11" Foreground="White"/>
                                                 </Border>
                                             </Grid>
                                             <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10 10">
-                                                    <Grid x:Name="EVENT_1_BUTTON" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseLeftButtonDown="EVENT_1_BUTTON_MouseLeftButtonDown">
+                                                    <Grid x:Name="MERCH_1_BUTTON" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseLeftButtonDown="MERCH_1_BUTTON_MouseLeftButtonDown">
                                                         <Rectangle VerticalAlignment="Stretch" RadiusY="10" RadiusX="10"  Width="150">
                                                             <Rectangle.Fill>
-                                                                <ImageBrush ImageSource="/IMAGES/Default/cryingcatmeme.jpg" Stretch="UniformToFill"/>
+                                                                <ImageBrush ImageSource="/IMAGES/Default/tshirt-intrams-a.jpg" Stretch="UniformToFill"/>
                                                             </Rectangle.Fill>
                                                         </Rectangle>
                                                         <Border Height="75" VerticalAlignment="Bottom" Background="Black" CornerRadius="0 0 10 10" Opacity=".7">
                                                             <StackPanel Margin="5" VerticalAlignment="Center">
-                                                                <TextBlock Text="FRI, APR 12" Foreground="White" FontSize="8" FontWeight="Medium"/>
-                                                                <TextBlock Text="ICT-Congress 2024" Foreground="White" FontSize="13" FontWeight="Medium"/>
-                                                                <TextBlock Text="IEC Convention" Foreground="White" FontSize="8"/>
-                                                                <TextBlock Text="649 Registered" Foreground="White" FontSize="6" FontWeight="Medium"/>
+                                                                <TextBlock Text="P300.00" Foreground="White" FontSize="8" FontWeight="Medium"/>
+                                                                <TextBlock Text="Intramural T-Shirt A" Foreground="White" FontSize="13" FontWeight="Medium"/>
+                                                                <TextBlock Text="UCLM" Foreground="White" FontSize="8"/>
+                                                                <TextBlock Text="304 Reserved" Foreground="White" FontSize="6" FontWeight="Medium"/>
                                                             </StackPanel>
                                                         </Border>
                                                     </Grid>
@@ -265,15 +326,15 @@
                                                     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                                         <Rectangle VerticalAlignment="Stretch" RadiusY="10" RadiusX="10" Width="150">
                                                             <Rectangle.Fill>
-                                                                <ImageBrush ImageSource="/IMAGES/Default/cryingcatmeme.jpg" Stretch="UniformToFill"/>
+                                                                <ImageBrush ImageSource="/IMAGES/Default/tshirt-intrams-b.jpg" Stretch="UniformToFill"/>
                                                             </Rectangle.Fill>
                                                         </Rectangle>
                                                         <Border Height="75" VerticalAlignment="Bottom" Background="Black" CornerRadius="0 0 10 10" Opacity=".7">
                                                             <StackPanel Margin="5" VerticalAlignment="Center">
-                                                                <TextBlock Text="FRI, APR 12" Foreground="White" FontSize="8" FontWeight="Medium"/>
-                                                                <TextBlock Text="College Days" Foreground="White" FontSize="13" FontWeight="Medium"/>
+                                                                <TextBlock Text="P300.00" Foreground="White" FontSize="8" FontWeight="Medium"/>
+                                                                <TextBlock Text="Intramural T-Shirt B" Foreground="White" FontSize="13" FontWeight="Medium"/>
                                                                 <TextBlock Text="UCLM" Foreground="White" FontSize="8"/>
-                                                                <TextBlock Text="649 Registered" Foreground="White" FontSize="6" FontWeight="Medium"/>
+                                                                <TextBlock Text="290 Reserved" Foreground="White" FontSize="6" FontWeight="Medium"/>
                                                             </StackPanel>
                                                         </Border>
                                                     </Grid>
@@ -281,43 +342,51 @@
                                             </Border>
                                         </Grid>
                                     </Grid>
-                                    <Grid>
-                                        <Rectangle Fill="White" RadiusX="10" RadiusY="10" HorizontalAlignment="Stretch" Height="250">
-                                            <Rectangle.Effect>
-                                                <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
-                                            </Rectangle.Effect>
-                                        </Rectangle>
-                                        <Grid  Margin="10">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="30"/>
-                                                <RowDefinition Height="*"/>
-                                            </Grid.RowDefinitions>
-                                            <Grid Grid.Row="0">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="50"/>
-                                                    <ColumnDefinition Width="5*"/>
-                                                    <ColumnDefinition Width="auto"/>
-                                                </Grid.ColumnDefinitions>
-                                                <TextBlock Grid.Column="0" Text="Logo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                                <TextBlock Grid.Column="1" Text="Merchandise" VerticalAlignment="Center" FontWeight="Medium" FontSize="18" FontFamily="Roboto"/>
-                                                <Border Grid.Column="2" Width="30" CornerRadius="10" Height="21" Background="#925FE2" >
-                                                    <TextBlock Text="• •"  VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="11" Foreground="White"/>
-                                                </Border>
-                                            </Grid>
-                                            <Border Grid.Row="1" Background="#FFE0E0E0" CornerRadius="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                                                <TextBlock Text="Basta naay card diri"/>
-                                            </Border>
-                                        </Grid>
-                                    </Grid>
                                 </StackPanel>
+                                <Border x:Name="EVENT_MENU" Height="75" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 90" Width="100" Background="White" CornerRadius="10" BorderThickness="2" BorderBrush="#925FE2" Visibility="Hidden">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Border x:Name="CREATE_BUTTON_EVENT" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Transparent" CornerRadius="10 10 0 0" MouseEnter="CREATE_BUTTON_EVENT_MouseEnter" MouseLeave="CREATE_BUTTON_EVENT_MouseLeave" MouseLeftButtonDown="CREATE_BUTTON_EVENT_MouseLeftButtonDown">
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0">
+                                                <Icon:PackIconMaterial Kind="CalendarBlank" Width="15" Foreground="#925FE2" VerticalAlignment="Center"/>
+                                                <TextBlock Text="Create" FontSize="15" FontWeight="Medium" Foreground="#925FE2" Margin="10 0"/>
+                                            </StackPanel>
+                                        </Border>
+                                        <Border x:Name="ARCHIVE_BUTTON_EVENT" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Background="Transparent" CornerRadius="0 0 10 10">
+                                            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0">
+                                                <Icon:PackIconMaterial Kind="Archive" Width="15" Foreground="#925FE2" VerticalAlignment="Center"/>
+                                                <TextBlock Text="Archive" FontSize="15" FontWeight="Medium" Foreground="#925FE2" Margin="10 0"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                                <Border x:Name="MERCH_MENU" Height="75" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 350" Width="100" Background="White" CornerRadius="10" BorderThickness="2" BorderBrush="#925FE2" Visibility="Hidden">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Border x:Name="CREATE_BUTTON_MERCH" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Transparent" CornerRadius="10 10 0 0" MouseLeftButtonDown="CREATE_BUTTON_MERCH_MouseLeftButtonDown">
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0">
+                                                <Icon:PackIconMaterial Kind="TshirtCrew" Width="15" Foreground="#925FE2" VerticalAlignment="Center"/>
+                                                <TextBlock Text="Create" FontSize="15" FontWeight="Medium" Foreground="#925FE2" Margin="10 0"/>
+                                            </StackPanel>
+                                        </Border>
+                                        <Border x:Name="ARCHIVE_BUTTON_MERCH" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Background="Transparent" CornerRadius="0 0 10 10">
+                                            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0">
+                                                <Icon:PackIconMaterial Kind="Archive" Width="15" Foreground="#925FE2" VerticalAlignment="Center"/>
+                                                <TextBlock Text="Archive" FontSize="15" FontWeight="Medium" Foreground="#925FE2" Margin="10 0"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </Grid>
+                                </Border>
                             </Grid>
                         </ScrollViewer>
                         <Grid Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5 0" >
-                            <Rectangle Fill="White" RadiusX="10" RadiusY="10">
-                                <Rectangle.Effect>
-                                    <DropShadowEffect Color="DimGray" ShadowDepth="10" Opacity="0.2" BlurRadius="50"/>
-                                </Rectangle.Effect>
-                            </Rectangle>
+                            <Rectangle Fill="White" RadiusX="10" RadiusY="10"/>
                             <Border Padding="10">
                                 <StackPanel>
                                     <TextBlock Text="Calendar" VerticalAlignment="Center" FontWeight="Medium" FontSize="20" FontFamily="Roboto" Margin="0 10"/>
@@ -326,8 +395,35 @@
                             </Border>
                         </Grid>
                     </Grid>
-                    <Grid x:Name="USERS_PANEL" Grid.Row="1" Visibility="Hidden">
-                        <TextBlock Text="Kania kay Users"/>
+                    <Grid x:Name="USERS_PANEL" Grid.Row="1" Margin="0 0 10 0">
+
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Students" FontFamily="Roboto" FontSize="25" FontWeight="Medium" VerticalAlignment="Center" Margin="0 10 10 10"/>
+                                <Button x:Name="ADD_STUDENT_BUTTON" Content="Add Student" Style="{StaticResource LOGIN_BUTTON}" Height="30" />
+                            </StackPanel>
+                            <DataGrid x:Name="STUDENTS_DATAGRID" AutoGenerateColumns="False" CanUserAddRows="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                                    <DataGridTextColumn Header="ID Number" Binding="{Binding IDNumber}" Width="*"/>
+                                    <DataGridTextColumn Header="Course" Binding="{Binding Course}" Width="*"/>
+                                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                                    <DataGridTemplateColumn Header="Action" Width="*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <!-- Define your action buttons here -->
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Content="Edit"/>
+                                                    <Button Content="Delete"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                        </StackPanel>
                     </Grid>
                     <Grid x:Name="MESSAGE_PANEL" Grid.Row="1" Visibility="Hidden">
                         <TextBlock Text="Kania kay Message"/>
@@ -339,6 +435,6 @@
                 </Grid>
             </Border>
         </Grid>
-        <Rectangle x:Name="DARK_BACKGROUND" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="Black" Opacity=".4" Visibility="Hidden"/>
+        <Rectangle x:Name="DARK_BACKGROUND" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="Black" Opacity=".4" Visibility="Hidden" MouseLeftButtonDown="DARK_BACKGROUND_MouseLeftButtonDown"/>
     </Grid>
 </Window>
